@@ -12,23 +12,21 @@
 <body>
   <div id="container"></div>
   <script>
-    window.addEventListener("load", () => {
-      const ruffle = window.RufflePlayer.newest();
-      const player = ruffle.createPlayer();
-      player.style.width = "100%";
-      player.style.height = "100%";
-      document.getElementById("container").appendChild(player);
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.addEventListener("load", () => {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    player.style.width = "100%";
+    player.style.height = "100%";
+    document.getElementById("container").appendChild(player);
 
-      const rawQuery = window.location.search.substring(1);
-      let message;
-      try { message = decodeURIComponent(rawQuery.replace(/\+/g, " ")); }
-      catch { message = rawQuery; }
+    const rawQuery = window.location.search.substring(1); 
+    const decodedMessage = decodeURIComponent(rawQuery);
 
-      player.load({
-        url: "ball.swf",
-        parameters: { message: message }  // change "message" to the name your SWF reads
-      });
+    player.load({
+      url: "ball.swf",
+      parameters: decodedMessage
     });
+  });
   </script>
-</body>
-</html>
+</div></body></html>
