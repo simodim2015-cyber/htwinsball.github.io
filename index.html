@@ -22,10 +22,9 @@
 
     const rawQuery = window.location.search.substring(1); 
     const decodedMessage = decodeURIComponent(rawQuery);
-
-    player.load({
-      url: "ball.swf",
-      parameters: decodedMessage
+player.load({
+  url: "ball.swf",
+  parameters: { message: "TEST1", msg: "TEST2", text: "TEST3", m: "TEST4", txt: "TEST5" });
     });
   });
   </script>
