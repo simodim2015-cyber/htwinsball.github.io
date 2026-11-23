@@ -30,7 +30,7 @@
 
         player.load({
           url: swfUrl.href,
-          parameters: { message: msg }
+          parameters: { foo: msg }
         }).catch(e => err.textContent += "Load error: " + e + "\n");
       } catch (e) {
         err.textContent += "Setup error: " + e + "\n";
