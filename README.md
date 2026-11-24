@@ -1,1 +1,1 @@
-# USE simodim2015-cyber/index.html?message=your+message
+# USE simodim2015-cyber/htwinsball.github.io/?message=your+message
